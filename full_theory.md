@@ -398,6 +398,79 @@ $$
 
 ---
 
+## Ratio Laws: Domain, Singularity, and Event Interpretation
+
+All ratio laws in this theory are defined on domains where denominators are nonzero.
+
+For a generic ratio law:
+
+$$
+R(\tau) = \frac{N(\tau)}{D(\tau)}
+$$
+
+the primary domain is:
+
+$$
+\mathcal{D}_R = \{\tau \mid D(\tau) \neq 0\}
+$$
+
+### Regimes
+
+1. Regular regime: $|D(\tau)| \ge \delta$ for chosen tolerance $\delta > 0$.
+2. Near-singular regime: $0 < |D(\tau)| < \delta$.
+3. Singular regime: $D(\tau) = 0$.
+
+### Singular Classification
+
+At $\tau=\tau_0$ with $D(\tau_0)=0$:
+
+- If $N(\tau_0) \neq 0$, the ratio has a pole-type singularity (unbounded gain in the idealized model).
+- If $N(\tau_0) = 0$, the form is indeterminate and must be resolved by local limiting behavior, model refinement, or higher-order expansion.
+
+### Operational Guard Conditions
+
+For computation, use one of the following explicit policies:
+
+1. **Domain-restricted evaluation**: compute only on $\mathcal{D}_R$.
+2. **Thresholded denominator**: replace $D$ with $\operatorname{sgn}(D)\max(|D|,\delta)$.
+3. **Event-mode switch**: when $|D|<\delta$, suspend ratio reporting and emit a singular-event flag.
+
+### Interpretation in Emotional and Knowledge Spaces
+
+In this theory, zero-denominator events are not automatically treated as "errors"; they may indicate a real singular boundary condition in the modeled space.
+
+- Example emotional boundary: $\text{Se} \to 0$ with nonzero $\text{Ep}$ produces divergent $\text{Sy}$ in the idealized equation, indicating extreme sensitivity to vanishing reference-difference.
+- Example Keller boundary: $\text{Em}'' \to 0$ with nonzero $\text{F}$ produces divergent $\text{K}$, indicating force persistence against near-zero productivity curvature.
+
+Phenomenological note: high-gain near-singular transitions are consistent with reports of compressed, high-density subjective episodes (for example, "life flashing before your eyes" during loss or acute threat). In this document, that statement is an interpretive mapping, not a proof claim.
+
+### Denominator Constraints for Declared Ratio Laws
+
+$$
+\text{Sy} = \frac{\text{Ep}}{\text{Se}},\quad \text{Se} \neq 0
+$$
+
+$$
+\text{Ec} = \frac{\text{Co}}{\text{Se}},\quad \text{Se} \neq 0
+$$
+
+$$
+\text{It} = \frac{\text{Cm}}{\text{Ch}},\quad \text{Ch} \neq 0
+$$
+
+$$
+\text{Kc} = \frac{\text{Ed}}{\text{Ch}},\quad \text{Ch} \neq 0
+$$
+
+$$
+\text{Kl} = \frac{\text{Ch}}{\text{Cz}},\quad \text{Cz} \neq 0
+$$
+
+$$
+\text{K} = \frac{\text{F}}{\text{Em}''},\quad \text{Em}'' \neq 0
+$$
+
+---
 ## Empathy and Sympathy
 
 Empathy is emotion in transit due to differences in capability, motive, and sensory spaces:
@@ -737,6 +810,9 @@ Proposed readiness levels:
 8. Organization has done this before.
 9. Available for purchase.
 10. Available due to previous work.
+
+
+
 
 
 

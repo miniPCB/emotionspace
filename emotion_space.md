@@ -1,166 +1,175 @@
-# Emotion Space
+# Emotion Space (Per Specification)
 
-## 1. Core Definition
+## 1. Definition
 
-Emotion space is modeled as a **productive evaluation** over three component spaces:
-
-- Ability space
-- Ambition space
-- Feelings space
-
-Let the composite state be:
+Emotion space is the productive evaluation of everything real and everything ideal:
 
 $$
-\mathbf{e}_t = [a_t, b_t, f_t]^\top
+\text{Emotional Space} = (\text{Real Things})(\text{Ideal Things})
 $$
 
-where:
-
-- $a_t \in \mathcal{A}$ is ability-state at time $t$
-- $b_t \in \mathcal{B}$ is ambition-state at time $t$
-- $f_t \in \mathcal{F}$ is feeling-state at time $t$
-
-A productive evaluation function maps these to an emotion value or vector:
+Emotion space is also the productive evaluation of capability space, motive space, and sensory space:
 
 $$
-\Phi: \mathcal{A} \times \mathcal{B} \times \mathcal{F} \to \mathcal{E}
+\text{Emotional Space} = (\text{Capability Space})(\text{Motive Space})(\text{Sensory Space})
 $$
 
+The normal filter function of emotional space is attention:
+
 $$
-\mathbf{e}_t = \Phi(a_t, b_t, f_t)
+\text{Attention} = (\text{Em})
+$$
+
+The normal existence term in emotional space is emotion:
+
+$$
+\text{Emotion} = \text{Em}
 $$
 
 ## 2. Component Spaces
 
-### 2.1 Ability Space ($\mathcal{A}$)
+### 2.1 Capability Space
 
-Ability space represents competence, skill execution, and capacity.
-
-Example state form:
+Normal existence term:
 
 $$
-a_t = [s_t, c_t, r_t]^\top
+\text{Ability} = \text{Ab}
 $$
 
-- $s_t$: skill level
-- $c_t$: confidence in execution
-- $r_t$: resource-readiness
+### 2.2 Motive Space
 
-### 2.2 Ambition Space ($\mathcal{B}$)
-
-Ambition space represents goal intensity, growth orientation, and persistence.
-
-Example state form:
+Normal existence term:
 
 $$
-b_t = [g_t, o_t, p_t]^\top
+\text{Ambition} = \text{Am}
 $$
 
-- $g_t$: goal magnitude
-- $o_t$: optimism about outcomes
-- $p_t$: persistence
+### 2.3 Sensory Space
 
-### 2.3 Feelings Space ($\mathcal{F}$)
-
-Feelings space captures affective tone and activation.
-
-Example state form:
+Normal existence term:
 
 $$
-f_t = [v_t, u_t, d_t]^\top
+\text{Feelings} = \text{Fe}
 $$
 
-- $v_t$: valence
-- $u_t$: arousal
-- $d_t$: emotional stability (or dysregulation inverse)
+## 3. Emotion Equation
 
-## 3. Logical Motion Framework
-
-Each space evolves by a state-transition rule with constraints and feedback.
-
-General motion template:
+Emotion is the productive evaluation of ability, ambition, and feelings:
 
 $$
-x_{t+1} = T_x(x_t, i_t, q_t)
+\text{Em} = \text{Ab} \cdot \text{Am} \cdot \text{Fe}
 $$
 
-where:
+This is the required composition of emotional space through its three component spaces.
 
-- $x_t$ is current state in a space
-- $i_t$ is input/evidence
-- $q_t$ is internal policy or logic
+## 4. Logical Motion Framework
 
-### 3.1 Motion in Ability Space
+Logical motion is represented using change functions (derivatives) and integral functions.
 
-$$
-a_{t+1} = T_A(a_t, \ell_t, \epsilon_t)
-$$
-
-- $\ell_t$: learning/practice input
-- $\epsilon_t$: error feedback
-
-One simple linear form:
+### 4.1 Capability Motion
 
 $$
-a_{t+1} = a_t + \eta_A \ell_t - \lambda_A \epsilon_t
+\text{Development} = \text{Ab}'
 $$
 
-### 3.2 Motion in Ambition Space
-
 $$
-b_{t+1} = T_B(b_t, \kappa_t, \pi_t)
+\text{Investment} = \text{Ab}''
 $$
 
-- $\kappa_t$: perceived opportunities
-- $\pi_t$: progress signal
-
-One simple form:
-
 $$
-b_{t+1} = b_t + \eta_B \kappa_t + \rho_B \pi_t - \delta_B \text{friction}_t
+\text{Luck} = \text{Ab}'''
 $$
 
-### 3.3 Motion in Feelings Space
-
 $$
-f_{t+1} = T_F(f_t, \sigma_t, \mu_t)
+\text{Potential} = \int \text{Ab}\,dt
 $$
 
-- $\sigma_t$: external stimuli
-- $\mu_t$: regulation process
-
-One simple form:
+Filter function:
 
 $$
-f_{t+1} = f_t + \eta_F \sigma_t - \lambda_F \mu_t
+\text{Opportunity} = (\text{Ab})
 $$
 
-## 4. Coupled Emotion Update
-
-Emotion is updated by combining the moved component states:
+### 4.2 Motive Motion
 
 $$
-\mathbf{e}_{t+1} = \Phi(a_{t+1}, b_{t+1}, f_{t+1})
+\text{Motivation} = \text{Am}'
 $$
 
-A weighted productive form:
-
 $$
-\mathbf{e}_{t+1} = W_A a_{t+1} + W_B b_{t+1} + W_F f_{t+1}
+\text{Inspiration} = \text{Am}''
 $$
 
-with optional nonlinearity:
-
 $$
-\mathbf{e}_{t+1} = \tanh\!\left(W_A a_{t+1} + W_B b_{t+1} + W_F f_{t+1} + \mathbf{c}\right)
+\text{Creativity} = \text{Am}'''
 $$
 
-## 5. Logical Conditions (Example)
+$$
+\text{Passion} = \int \text{Am}\,dt
+$$
 
-A minimal logic policy can be encoded as:
+$$
+\text{Belief} = \iint \text{Am}\,dt^2
+$$
 
-1. If ability increases and ambition is stable, positive emotion trend increases.
-2. If ambition exceeds ability for sustained periods, frustration risk increases.
-3. If feelings regulation improves, volatility decreases even under high ambition.
+Filter function:
 
-These conditions can gate updates by adjusting $\eta_A, \eta_B, \eta_F$ over time.
+$$
+\text{Interest} = (\text{Am})
+$$
+
+### 4.3 Sensory Motion
+
+$$
+\text{Influence} = \text{Fe}'
+$$
+
+$$
+\text{Impact} = \text{Fe}''
+$$
+
+$$
+\text{Shock} = \text{Fe}'''
+$$
+
+$$
+\text{Mentality} = \int \text{Fe}\,dt
+$$
+
+Filter function:
+
+$$
+\text{Favorite} = (\text{Fe})
+$$
+
+### 4.4 Emotion Motion
+
+First change function of emotion:
+
+$$
+\text{Productivity} = \text{Em}'
+$$
+
+So motion in emotion space is induced by motion in capability, motive, and sensory spaces through:
+
+$$
+\text{Em} = \text{Ab} \cdot \text{Am} \cdot \text{Fe}
+$$
+
+## 5. Sentiment in Emotion Space
+
+Difference between a signal point and a reference point in emotional space is sentiment:
+
+$$
+\text{Sentiment} = \text{Se}
+$$
+
+$$
+\text{Se} = [\text{Em}]_{\text{signal}} - [\text{Em}]_{\text{reference}}
+$$
+
+Equivalent delta form:
+
+$$
+\text{Se} = \Delta \text{Em}
+$$

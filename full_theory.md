@@ -17,6 +17,64 @@ Mathematics is a system for thinking, including numbers, arithmetic, algebra, ge
 
 Let a system be a set of methods and rules.
 
+## Operator Semantics
+
+To keep equations rigorous across domains, two operator classes are defined explicitly.
+
+### Productive Evaluation
+
+A **productive evaluation** is an n-ary composition operator that combines terms into a single resultant term while preserving interpretable structure:
+
+$$
+\operatorname{Prod}_{\Omega}(x_1,\ldots,x_n) = x_1 \otimes_{\Omega} x_2 \otimes_{\Omega} \cdots \otimes_{\Omega} x_n
+$$
+
+where $\Omega$ specifies the domain and admissible composition law.
+
+A productive evaluation may be instantiated by operations analogous to multiplication or logical conjunction, including:
+
+- Arithmetic product: $x_1x_2\cdots x_n$
+- Boolean conjunction: $x_1 \land x_2 \land \cdots \land x_n$
+- Continuous conjunction families (for fuzzy/graded systems), e.g., t-norm style operators
+
+Minimum rigor requirements for any declared productive-evaluation instance:
+
+1. Domain declaration: define input/output sets and admissible values.
+2. Closure: output remains in the declared codomain.
+3. Identity/neutral handling: define how null or neutral inputs are treated.
+4. Zero-state handling: define annihilator behavior when an input is fully absent (for example, multiplicative zero).
+
+This allows statements like $\text{Em} = \text{Ab}\cdot\text{Am}\cdot\text{Fe}$ to be interpreted as a specific productive-evaluation instance in emotional space.
+
+### Normal Filter Function
+
+A **normal filter function** is a mapping that selects, attenuates, or emphasizes components of a signal/state relative to a reference criterion:
+
+$$
+\operatorname{Filt}_{\Omega}: \mathcal{X}_{\Omega} \to \mathcal{X}_{\Omega}
+$$
+
+This is directly analogous to signal-processing filters. For a signal $x(\tau)$, a linear time-invariant (LTI) exemplar is:
+
+$$
+y(\tau) = (h * x)(\tau)
+$$
+
+with impulse response $h$ and convolution $*$. More generally, nonlinear/state-dependent filters are permitted when explicitly declared.
+
+Interpretation in this theory:
+
+- $(\text{Kn})$ is the understanding-filtered projection of knowledge.
+- $(\text{Em})$ is the attention-filtered projection of emotion.
+- $(\text{Ab}), (\text{Am}), (\text{Fe})$ are opportunity/interest/favorite filtered projections.
+
+Minimum rigor requirements for any normal filter function:
+
+1. Criterion definition: specify what is passed, attenuated, or rejected.
+2. Stability/boundedness statement (or explicit non-stable intent).
+3. Causality statement for dynamic use over $\tau$.
+4. Parameterization: expose tunable coefficients or thresholds.
+
 ## Existential Calculus
 
 A thing must change for its change function to have an existence other than nothing.
@@ -679,5 +737,6 @@ Proposed readiness levels:
 8. Organization has done this before.
 9. Available for purchase.
 10. Available due to previous work.
+
 
 

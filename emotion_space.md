@@ -2,13 +2,13 @@
 
 ## 1. Definition
 
-Emotion space is the productive evaluation of everything real and everything ideal:
+Emotional space is the productive evaluation of everything real and everything ideal:
 
 $$
 \text{Emotional Space} = (\text{Real Things})(\text{Ideal Things})
 $$
 
-Emotion space is also the productive evaluation of capability space, motive space, and sensory space:
+Emotional space is also the productive evaluation of capability space, motive space, and sensory space:
 
 $$
 \text{Emotional Space} = (\text{Capability Space})(\text{Motive Space})(\text{Sensory Space})

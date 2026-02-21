@@ -1,5 +1,5 @@
 Program for Computing Machinery
-Nolan Manteufel | Revision 
+
 I endeavor to specify a program for future computing machinery. This specification is intended to help future scientists, engineers, and self-programming computing machinery perform their work.
 Fundamental Theorem of Education
 	Things can be known well enough to be described and taught.

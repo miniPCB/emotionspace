@@ -1,4 +1,4 @@
-# Emotion Space (Per Specification)
+# Emotional Space (Per Specification)
 
 ## 1. Definition
 

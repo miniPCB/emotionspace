@@ -65,15 +65,15 @@ $$
 Integral functions of knowledge:
 
 $$
-\text{Meaning} = \int \text{Kn}\,dt
+\text{Meaning} = \int \text{Kn}\,d\tau
 $$
 
 $$
-\text{Life} = \iint \text{Kn}\,dt^2
+\text{Life} = \iint \text{Kn}\,d\tau^2
 $$
 
 $$
-\text{Chaos} = \iiint \text{Kn}\,dt^3
+\text{Chaos} = \iiint \text{Kn}\,d\tau^3
 $$
 
 Normal filter function of ideal space:
@@ -85,7 +85,7 @@ $$
 Change and integral functions of understanding are permitted:
 
 $$
-(\text{Kn})',\ (\text{Kn})'',\ (\text{Kn})''',\ \int (\text{Kn})\,dt,\ \iiint (\text{Kn})\,dt^3
+(\text{Kn})',\ (\text{Kn})'',\ (\text{Kn})''',\ \int (\text{Kn})\,d\tau,\ \iiint (\text{Kn})\,d\tau^3
 $$
 
 ---
@@ -153,7 +153,7 @@ $$
 Independent variable of everything-space:
 
 $$
-\tau = \text{Tau}
+\text{Tau} = \tau
 $$
 
 Occurrence space is the set of everything activated at a moment or interval.
@@ -173,7 +173,7 @@ Tau should vary from here-now to maximal feedforward/feedback extent; proceed fr
 Culture is the evaluation of life within a group:
 
 $$
-\text{Culture} = \text{Life}(\text{Group}) = \iint \text{Kn}\,dt^2\,(\text{Group})
+\text{Culture} = \text{Life}(\text{Group}) = \iint \text{Kn}\,d\tau^2\,(\text{Group})
 $$
 
 A cult is a group where culture is controlled by a head member.
@@ -233,7 +233,7 @@ $$
 Integral function:
 
 $$
-\text{Potential} = \int \text{Ab}\,dt
+\text{Potential} = \int \text{Ab}\,d\tau
 $$
 
 Filter function:
@@ -269,11 +269,11 @@ $$
 Integral functions:
 
 $$
-\text{Passion} = \int \text{Am}\,dt
+\text{Passion} = \int \text{Am}\,d\tau
 $$
 
 $$
-\text{Belief} = \iint \text{Am}\,dt^2
+\text{Belief} = \iint \text{Am}\,d\tau^2
 $$
 
 Filter function:
@@ -309,7 +309,7 @@ $$
 Integral function:
 
 $$
-\text{Mentality} = \int \text{Fe}\,dt
+\text{Mentality} = \int \text{Fe}\,d\tau
 $$
 
 Filter function:
@@ -425,7 +425,7 @@ This equation is designated as Nolan's Law.
 First integral function of emotional force:
 
 $$
-\text{Purpose} = \int \text{F}\,dt
+\text{Purpose} = \int \text{F}\,d\tau
 $$
 
 Observation: Love is discovery of shared purpose.
@@ -679,3 +679,5 @@ Proposed readiness levels:
 8. Organization has done this before.
 9. Available for purchase.
 10. Available due to previous work.
+
+

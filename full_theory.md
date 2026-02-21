@@ -610,7 +610,7 @@ $$
 $$
 
 $$
-\text{K} = \frac{\text{F}}{[\text{Pr}]'}
+\text{K} = \frac{\text{F}}{\text{Em}''}
 $$
 
 $$

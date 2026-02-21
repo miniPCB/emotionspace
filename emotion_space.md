@@ -150,7 +150,7 @@ $$
 \text{Productivity} = \text{Em}'
 $$
 
-So motion in emotion space is induced by motion in capability, motive, and sensory spaces through:
+So motion in emotional space is induced by motion in capability, motive, and sensory spaces through:
 
 $$
 \text{Em} = \text{Ab} \cdot \text{Am} \cdot \text{Fe}
